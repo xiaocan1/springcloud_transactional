@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+      config:
+        server:
+          native:
+            search-locations: file:///F:/softCode/git/springcloud/springcloud_transactional/config/src/main/resources/config-repo
+        username: test
+        password: test
+
+server:
+  port: 8081
+
+management:
+  context-path: /admin
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+eureka:
+  client:
+    service-url:
+      defaultZon: http://127.0.0.1:8080/eureka/
